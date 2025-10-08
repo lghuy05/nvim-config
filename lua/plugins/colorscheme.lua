@@ -1,18 +1,30 @@
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {
-    transparent = true,
-    styles = {
-      sidebars = "transparent",
-      floats = "transparent",
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
+
+  -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
     },
-    on_colors = function(colors) end,
-    on_highlights = function(highlights, colors) end,
   },
-  config = function(_, opts)
-    require("tokyonight").setup(opts)
-    vim.cmd.colorscheme("tokyonight")
-  end,
 }
+-- return {
+--   "folke/tokyonight.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   opts = {
+--     transparent = true,
+--     styles = {
+--       sidebars = "transparent",
+--       floats = "transparent",
+--     },
+--     on_colors = function(colors) end,
+--     on_highlights = function(highlights, colors) end,
+--   },
+--   config = function(_, opts)
+--     require("tokyonight").setup(opts)
+--     vim.cmd.colorscheme("tokyonight")
+--   end,
+-- }
